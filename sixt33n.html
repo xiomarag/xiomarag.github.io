@@ -34,7 +34,7 @@
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand navbar-link" href="home.html" style="padding-top:20px;padding-left:0px;"><img class="hidden-xs hidden-sm hidden-md hidden-lg" src="assets/img/logo2.png" style="padding-left:30px;"></a>
+                <a class="navbar-brand navbar-link" href="home.html" style="padding-top:20px;padding-left:0px;"><img class="hidden-xs hidden-sm hidden-md hidden-lg" src="assets/img/logo2.png" style="padding-left:30px;/*padding-top:0px;*/"></a>
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
             </div>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -43,39 +43,33 @@
                     <li class="active" role="presentation"><a href="index.html" data-bs-hover-animate="jello" style="font-size:17px;padding-top:32px;font-family:'Roboto';">home </a></li>
                     <li class="active" role="presentation"><a href="about.html" data-bs-hover-animate="jello" style="font-size:17px;padding-top:32px;font-family:'Roboto';">about </a></li>
                     <li class="active" role="presentation"><a href="https://indd.adobe.com/view/06072dc1-2381-4466-9a07-74f0e4953654" data-bs-hover-animate="jello" style="font-size:17px;padding-top:32px;font-family:'Roboto';">resume </a></li>
-                    <li class="active" role="presentation"><a href="projects.html" data-bs-hover-animate="jello" style="font-size:17px;padding-top:32px;font-family:'Roboto';">projects </a></li>
+                    <li class="active" role="presentation"><a href="projects.html" data-bs-hover-animate="jello" style="font-size:17px;padding-top:32px;/*background-color:#f1ebfb;*/font-family:'Roboto';">projects </a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <h2 class="text-lowercase text-center" style="color:#5a3598;font-family:'Roboto';"> </h2>
-    <div class="col-md-12"><img class="hidden-sm hidden-md hidden-lg" src="assets/img/xs.jpg" height="300" style="padding-left:16px;"></div>
-    <div class="team-clean">
+    <div class="article-dual-column">
         <div class="container">
-            <div class="intro"></div>
-            <div class="row people">
-                <div class="col-md-8 col-sm-6 item" style="padding-top:50px;">
-                    <p class="description" style="text-align:left;color:#5a3598;font-size:20px;"><strong>Hi there!</strong></p>
-                    <p class="description">My name is Xiomara Gonzalez and I am currently a third year Electrical Engineering and Computer Science major at the University of California, Berkeley. For the past two years, I have been fortunate enough to take courses on both sides
-                        of the EE and CS spectrum and, as of now, some of my main interests are in the areas of end-user software engineering, low-power system design, network security, and semiconductor materials &amp; device processing. In my free time
-                        I like to play around with architecture design software and Adobe's Creative Cloud applications. I usually just sketch up whatever comes to mind!</p>
-                    <p class="description">Feel like you have a project that could benefit from my problem-solving skills? Send me an email or a message via social media linked below!</p>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h2 class="text-lowercase text-center" style="color:#5a3598;font-family:'Roboto';font-weight:bold;">sixt33n voice controlled robot car</h2></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-1 col-lg-push-1 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                    <div class="text" style="color:#5a3598;">
+                        <p> SIXT33N is a voice controlled robot car that implements a closed loop system and whose main components feature a multi-part circuit and a TI-MSP430 microcontroller unit. </p>
+                        <p>The car uses an electret microphone that is responsible for taking in an input in the form of a sound wave, which behaves as a variable current source. We take that input and represent it as a voltage which we then put through
+                            a buffer in order to avoid it being distorted by other circuit components. Next, we remove the microphone drift and send the input through a non-inverting amplifier so that the signal is amplified. Lastly, the input goes through
+                            a second-order low-pass filter, so that the signal is tailored to what the MSP430 accepts. </p>
+                        <p>The car responds to four words: monkey, fly, cat, and taco. Choosing words for such type of project became one of the most crucial parts. The number of syllables, the ending sounds, and the length of the words were something that
+                            had to be greatly considered when it came to correctly classifying them using the mathematical method of principal component analysis (PCA). </p><a href="https://drive.google.com/file/d/1BmZiPFH-yY-_z3f-dOevAQLzx_bsCRdX/view?usp=sharing"
+                        style="color:#FF0000">Full report available here.</a><img class="hidden-xs hidden-sm" src="assets/img/frontend.png"><img class="hidden-xs hidden-sm" src="assets/img/closedloop.jpg"><img class="hidden-xs hidden-sm" src="assets/img/car2.jpg">
+                        <img
+                        class="hidden-xs hidden-sm" src="assets/img/car3.jpg"><img class="hidden-xs hidden-sm" src="assets/img/car1.jpg"></div>
                 </div>
-                <div class="col-md-4"><img class="hidden-xs hidden-sm hidden-lg" src="assets/img/21908025_1476309632446880_1668077042_o.jpg" width="300px"></div>
-                <div class="col-md-1 hidden-xs hidden-sm"><img class="hidden-xs hidden-sm hidden-md" src="assets/img/l.jpg" style="width:360px;"></div>
-                <div class="col-md-12"><img class="hidden-xs hidden-md hidden-lg" src="assets/img/s.jpg" width="350px" style="padding-top:65px;padding-left:40px;"></div>
+                <div class="col-md-12 col-sm-12 col-sm-offset-0 hidden-md hidden-lg"><img src="assets/img/frontend 2.png"><img src="assets/img/closedloop 2.png"><img src="assets/img/car2222.jpg"><img src="assets/img/car322.jpg"><img class="hidden-md hidden-lg" src="assets/img/car1222.jpg" style="/*padding-left:160px;*/"></div>
             </div>
         </div>
-    </div>
-    <div class="features-clean"></div>
-    <div class="footer-basic" style="padding-top:50px;">
-        <footer>
-            <div class="social"><a href="https://github.com/xiomarag"><i class="icon ion-social-github"></i></a><a href="https://www.linkedin.com/in/xiomara-gonzalez-b17435105"><i class="icon ion-social-linkedin"></i></a></div>
-            <ul class="list-inline">
-                <li><a href="#">"A pessimist sees the difficulty in every opportunity; an optimist sees the opportunity in every difficulty." - Winston Churchill</a></li>
-            </ul>
-            <p class="copyright">Xiomara Gonzalez© 2017</p>
-        </footer>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
