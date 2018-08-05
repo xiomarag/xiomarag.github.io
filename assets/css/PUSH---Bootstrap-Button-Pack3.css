@@ -8,7 +8,7 @@ a:active, a:hover {
 }
 
 h1, h2, h3, h4, h5 {
-  color:#444444;
+  color:#5a3598;
   font-family:"Roboto",sans-serif;
   font-weight:100;
   text-transform:uppercase;
@@ -21,7 +21,7 @@ h1 {
 h2 {
   font-size:24px;
   font-weight:100;
-  letter-spacing:2px;
+  /*letter-spacing:2px;*/
   text-transform:uppercase;
   margin-bottom:30px;
 }
@@ -31,7 +31,7 @@ h3 {
 }
 
 .logo {
-  background:url(../../assets/img/bouton-logo.jpg);
+  background:url(bouton-logo.jpg);
   height:140px;
   margin:60px auto 30px;
   width:140px;
