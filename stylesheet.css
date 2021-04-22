@@ -70,7 +70,8 @@ a {
 
 a:focus,
 a:hover {
-  color: #5a3598;
+  /* color: #5a3598; */
+  color: #bf5700;
   text-decoration: none;
 }
 
@@ -159,7 +160,8 @@ span.highlight {
 
 .header a:hover {
   background-color: white;
-  color: #5a3598;
+  /* color: #5a3598; */
+  color: #bf5700;
 }
 
 .header-right {
