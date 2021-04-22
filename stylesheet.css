@@ -64,14 +64,15 @@
 }
 
 a {
-  color: #1772d0;
+  /* color: #1772d0; */
+  color: #bf5700;
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
   /* color: #5a3598; */
-  color: #bf5700;
+  color: #333f48;
   text-decoration: none;
 }
 
@@ -144,7 +145,8 @@ span.highlight {
 
 .header a {
   float: left;
-  color: #0074E1;
+  /* color: #0074E1; */
+  color: #bf5700;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -161,7 +163,7 @@ span.highlight {
 .header a:hover {
   background-color: white;
   /* color: #5a3598; */
-  color: #bf5700;
+  color: #333f48;
 }
 
 .header-right {
