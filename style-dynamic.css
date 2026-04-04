@@ -4,17 +4,27 @@
   --bg-secondary: #fff;
   --text-primary: #21243d;
   --text-secondary: #373abd;
-  --text-muted: #888bb0;
-  --accent: #2d72d9;
+  --text-muted: #343550;
+  --accent: #4035d7;
   --accent-hover: #1a5bc7;
   --border: #ececff;
   --shadow: rgba(30,32,50,0.06);
   --shadow-hover: rgba(30,32,50,0.12);
+  /* --shadow-hover:#c8298e; */
   --nav-hover: #e7e9fc;
   --success: #10b981;
   --warning: #f59e0b;
   --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --href: #c8298e;
+}
+a {
+  color: var(--href);
+  text-decoration: none; /* optional */
+}
+
+a:hover {
+  color: var(--accent-hover); /* or define another var like --href-hover */
 }
 
 .dark-mode {
@@ -22,13 +32,14 @@
   --bg-secondary: #1a1a2e;
   --text-primary: #e8e8e8;
   --text-secondary: #7b9ddb;
-  --text-muted: #6b7280;
+  --text-muted: #c9ccd1;
   --accent: #5c8df6;
   --accent-hover: #7b9ffb;
   --border: #2a2a4a;
   --shadow: rgba(0,0,0,0.4);
   --shadow-hover: rgba(0,0,0,0.6);
   --nav-hover: #1f2a4a;
+  --href: #e897ca;
 }
 
 /* ===== Base Styles ===== */
@@ -168,8 +179,8 @@ nav a.active, nav a:focus, nav a:hover {
 }
 
 .sidebar:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px var(--shadow-hover);
+  /* transform: translateY(-5px); */
+  /* box-shadow: 0 8px 30px var(--shadow-hover); */
 }
 
 /* Scrollable inner container */
@@ -985,6 +996,23 @@ footer {
   background: var(--text-secondary);
   color: var(--bg-primary);
 }
+.paper-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.paper-authors {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.paper-venue {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
 
 /* ===== Activity Grid ===== */
 .activity-grid {
@@ -1661,8 +1689,3 @@ footer {
  border-radius: 50%;
  display: inline-block;
 }
-
-
-
-
-
