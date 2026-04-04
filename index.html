@@ -1,9 +1,374 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="1; url='https://sites.utexas.edu/xiomara/'" />
-  </head>
-  <!-- <body>
-    <p>Updated website at: <a href="https://sites.utexas.edu/xiomara/"> as of 2020-02-07</a>.</p>
-  </body> -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xiomara Gonzalez</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="description" content="AI & NLP Research Fellow at Queen's University Belfast. Specializing in LLMs, VLMs, and Information Extraction."> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Vis.js for Network Graph -->
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <link rel="stylesheet" href="style-dynamic.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+</head>
+<body class="light-mode">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+  
+  <!-- Search Bar -->
+  <div class="search-container" id="search-container">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search papers, skills, experience..." aria-label="Search">
+      <button id="search-close" class="search-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+
+  <!-- Mobile Menu Toggle -->
+  <button class="mobile-menu-toggle" id="mobile-menu-btn">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <nav id="main-nav">
+    <a href="index.html" class="active">About</a>
+    <a href="https://app.box.com/s/w6vire4f7tfja1dbvzyuale6eivg22jy">CV</a>
+    <a href="papers.html">Papers</a>
+    <!-- <a href="activities.html">Activities</a> -->
+    <!-- <a href="#news">News</a> -->
+    <!-- <a href="#contact">Contact</a> -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button id="search-toggle" class="search-toggle" aria-label="Search">
+      <i class="fas fa-search"></i>
+    </button>
+  </nav>
+  
+  <div class="container main-flex">
+    <aside class="sidebar">
+		<div class="sidebar-content">
+		  <img src="profile.png" alt="Xiomara Gonzalez" class="profile-pic-tiny">
+		  <div>
+			<div class="sidebar-name">Xiomara Gonzalez</div>
+			<div class="sidebar-title typing-text">
+			  <span class="typing-line">Ph.D. Candidate</span>
+			  <span class="typing-line">Department of Electrical and Computer Engineering</span>
+        <span class="typing-line">UT Austin</span>
+			</div>
+			
+			<!-- Quick Stats -->
+			<!-- <div class="quick-stats">
+			  <div class="stat-item">
+				<span class="stat-number" id="paper-count">10+</span>
+				<span class="stat-label">Publications</span>
+			  </div>
+			  <div class="stat-item">
+				<span class="stat-number" id="citation-count">Loading...</span>
+				<span class="stat-label">Citations</span>
+			  </div>
+			</div> -->
+			
+			<!-- Email Copy Button -->
+			<!-- <div class="email-copy-wrapper">
+			  <div class="email-address" id="email-text">xiomarag@utexas.edu</div>
+			  <button class="copy-email-btn" id="copy-email-btn" title="Copy email">
+				<i class="fas fa-copy"></i>
+			  </button>
+			  <div class="copy-toast" id="copy-toast">Copied!</div>
+			</div> -->
+			
+			<!-- CV Download -->
+			<!-- <a href="cv/Pritam_Deka_CV.pdf" download class="cv-download-btn" id="cv-download">
+			  <i class="fas fa-download"></i> Download CV
+			  <span class="download-count" id="download-count">Loading...</span>
+			</a> -->
+			
+			<!-- HuggingFace Stats -->
+			<!-- <div class="hf-stats" id="hf-stats">
+			  <div class="hf-stat-item">
+				<i class="fas fa-download"></i>
+				<span id="hf-downloads">Loading...</span>
+				<span class="hf-stat-label">Huggingface Model Downloads</span>
+			  </div>
+			  <div class="hf-stat-item">
+				<i class="fas fa-box"></i>
+				<span id="hf-models">Loading...</span>
+				<span class="hf-stat-label">Huggingface Models</span>
+			  </div>
+			</div> -->
+			
+			<div class="sidebar-contact">
+			  <div><i class="fas fa-map-marker-alt"></i> Austin, TX, USA</div>
+			  <div><i class="fas fa-envelope"></i> <a href="mailto:xiomarag@utexas.edu">xiomarag@utexas.edu</a></div>
+			  <div><i class="fab fa-github"></i> <a href="https://github.com/xiomarag" target="_blank">GitHub</a></div>
+			  <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/xiomarag/" target="_blank">LinkedIn</a></div>
+			  <div><i class="fab fa-google"></i> <a href="https://scholar.google.com/citations?user=nMb3PssAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a></div>
+			</div>
+		</div>
+      </div>
+    </aside>
+    
+    <main>
+	
+	  <section class="fade-in" id="about">
+        <h2><i class="fas fa-user"></i> About</h2>
+        <p>
+          I am a fifth-year Ph.D. candidate in the Department of Electrical and Computer Engineering at UT Austin and a part of 
+          <a href="https://www.bme.utexas.edu/people/faculty-directory/markey" target="_blank" rel="noreferrer noopener"> Prof. Mia K. Markey's</a> 
+          <a href="https://bmil.bme.utexas.edu/" target="_blank" rel="noreferrer noopener">Biomedical Informatics Lab</a> (BMIL). 
+          My research interests are at the intersections of multimedia (text, image, video) processing, online information-seeking behavior, 
+          sense-making, and clinical decision-making. Driven by my interdisciplinary background, I am passionate about integrating machine 
+          learning approaches in these spaces to help users make sense of the health-related information they collect online. 
+          <br><br>
+          As part of BMIL, I collaborate with the multi-disciplinary, multi-institutional <a href="https://www.mdanderson.org/research/departments-labs-institutes/programs-centers/multidisciplinary-breast-reconstruction-research-program.html" target="_blank" rel="noreferrer noopener">MBRRP 
+          team</a> at <a href="https://www.mdanderson.org/" target="_blank" rel="noreferrer noopener">MD Anderson Cancer Center</a>.
+          I gratefully acknowledge the support I have received from the National Institutes of Health (NIH) T32 Fellowship, 
+          UT Tolbert Fellowship in Electrical and Computer Engineering, and UT Thrust 2000 - William H. Cunningham Endowed 
+          Graduate Fellowship in Engineering. 
+          
+          <br><br>Previously, I received my bachelor's in 
+          <a href="https://eecs.berkeley.edu/" target="_blank" rel="noreferrer noopener">Electrical Engineering and Computer Science</a> 
+          from <a href="https://www.berkeley.edu/" target="_blank" rel="noreferrer noopener">UC Berkeley</a>. 
+          I have also had the opportunity to intern at the <a href="https://als.lbl.gov/" target="_blank" rel="noreferrer noopener">Lawrence 
+            Berkeley National Lab</a>, <a href="https://www.slb.com/" target="_blank" rel="noreferrer noopener">Schlumberger</a>, and 
+            the <a href="https://i2db.wustl.edu/">WashU Institute for Informatics, Data Science, and Biostatistics</a>.</p>
+        </p>
+      </section>
+	
+      <!-- Research Interests Cloud -->
+      <section class="fade-in" id="interests">
+        <h2><i class="fas fa-lightbulb"></i> Research Interests</h2>
+        <div class="interests-cloud">
+          <span class="interest-tag" data-weight="9">Large Language Models</span>
+          <span class="interest-tag" data-weight="9">Vision-Language Models</span>
+          <span class="interest-tag" data-weight="8">Information Extraction</span>
+          <span class="interest-tag" data-weight="7">Information-seeking behavior</span>
+          <span class="interest-tag" data-weight="6">Prompt Engineering</span>
+          <span class="interest-tag" data-weight="5">Multimodal AI</span>
+          <span class="interest-tag" data-weight="5">Health informatics</span>
+          <span class="interest-tag" data-weight="4">Qualitative research</span>
+          <span class="interest-tag" data-weight="4">Quantitative research</span>
+          <span class="interest-tag" data-weight="3">Clinical decision-making</span>
+          <span class="interest-tag" data-weight="3">Accessibility</span>
+          <span class="interest-tag" data-weight="2">Health equity</span>
+          <span class="interest-tag" data-weight="2">Engineering education</span>
+        </div>
+      </section>
+	  
+	  
+	  <!-- Research Topic Network -->
+		<!-- <section class="fade-in" id="research-network-section">
+		 <h2><i class="fas fa-project-diagram"></i> Research Topics Network</h2>
+		 <p style="color: var(--text-muted); margin-bottom: 1rem;">
+		  Interactive map showing connections between my research areas. Hover over nodes to explore, drag to rearrange.
+		 </p>
+		 <div id="research-network"></div>
+		 <div class="network-legend">
+		  <div class="legend-item">
+		   <span class="legend-dot" style="background: #2d72d9;"></span>
+		   <span>Core Research</span>
+		  </div>
+		  <div class="legend-item">
+		   <span class="legend-dot" style="background: #10b981;"></span>
+		   <span>Applications</span>
+		  </div>
+		  <div class="legend-item">
+		   <span class="legend-dot" style="background: #f59e0b;"></span>
+		   <span>Methods</span>
+		  </div>
+		  <div class="legend-item">
+		   <span class="legend-dot" style="background: #8b5cf6;"></span>
+		   <span>Domains</span>
+		  </div>
+		 </div>
+		</section> -->     
+
+      <!-- News/Updates Section -->
+      <!-- <section class="fade-in" id="news">
+        <h2><i class="fas fa-newspaper"></i> Latest News & Updates</h2>
+        <div class="news-timeline">
+          <div class="news-item">
+            <span class="news-date">March 2026</span>
+            <div class="news-content">
+              <h4><i class="fas fa-file-contract"></i> Paper Accepted at ACM SAC 2026</h4>
+              <p>Our work on "Structured Extraction from Business Process Diagrams Using Vision-Language Models" has been accepted for presentation at ACM SAC 2026.</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">January 2025</span>
+            <div class="news-content">
+              <h4><i class="fas fa-chalkboard-teacher"></i> Vision and Language Symposium Speaker</h4>
+              <p>Main speaker at the Vision and Language Symposium 2025 held at Queen's University Belfast.</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">May 2024</span>
+            <div class="news-content">
+              <h4><i class="fas fa-briefcase"></i> Started as Research Fellow at QUB</h4>
+              <p>Joined Queen's University Belfast as a Research Fellow in AI, focusing on corporate document understanding with LLMs and VLMs.</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">December 2024</span>
+            <div class="news-content">
+              <h4><i class="fas fa-graduation-cap"></i> PhD Completed</h4>
+              <p>Successfully defended PhD thesis on "Evidence-Based Approach to Verification of Online Health-Related Content" at Queen's University Belfast.</p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Academic Journey Map -->
+      <!-- <section class="fade-in" id="journey"> -->
+        <!-- <h2><i class="fas fa-map-marked-alt"></i> Academic Journey</h2> -->
+        <!-- <div class="journey-map"> -->
+          <!-- <div class="map-container" id="map-container"> -->
+            <!-- Journey items will be populated by JS -->
+          <!-- </div>
+        </div>
+      </section> -->
+<!-- 
+      <section class="fade-in" id="skills">
+        <h2><i class="fas fa-tools"></i> Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
+          <div class="skill-tag"><i class="fas fa-brain"></i> NLP</div>
+          <div class="skill-tag"><i class="fas fa-robot"></i> LLM/VLM</div> -->
+          <!-- <div class="skill-tag"><i class="fab fa-cuttlefish"></i> C++</div> -->
+          <!-- <div class="skill-tag"><i class="fas fa-database"></i> Data Pipelines</div>
+          <div class="skill-tag"><i class="fas fa-search"></i> Information Extraction</div>
+          <div class="skill-tag"><i class="fab fa-hackerrank"></i> Model Evaluation</div>
+          <div class="skill-tag"><i class="fas fa-flask"></i> Research</div> -->
+          <!-- <div class="skill-tag"><i class="fas fa-shield-alt"></i> AI Security</div> -->
+          <!-- <div class="skill-tag"><i class="fas fa-language"></i> Code-Mixed NLP</div> -->
+        <!-- </div> -->
+      <!-- </section> -->
+
+      <!-- <section class="fade-in" id="experience">
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Research Fellow (AI)</h3>
+              <span class="timeline-date">May 2024–Ongoing | Queen's University Belfast</span>
+              <ul>
+                <li>Focusing on AI for corporate document understanding with multimodal data processing</li>
+                <li>Investigating GPT-based models and open-source LLMs/VLMs for corporate data analysis</li>
+                <li>Integrating NLP and prompt engineering to streamline information extraction</li>
+                <li>Evaluating prompts and models on curated process diagram datasets</li>
+				<li>Developed agentic AI workflows converting flowchart and process diagram images into executable diagram code, supporting process standardisation and documentation.</li>
+				<li>Delivered high-accuracy multimodal AI pipelines by fine-tuning open-source VLMs (Qwen2.5-VL, Qwen3-VL, Gemma 3) and applying advanced prompt and context engineering with frontier LLM APIs (GPT-4.1, GPT-5.2, Gemini 2.5 Flash), outperforming OCR-centric approaches by a wide margin.</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Subject Teacher</h3>
+              <span class="timeline-date">May 2025–August 2025 | INTO Queen's University Belfast</span>
+              <ul>
+                <li>Delivered lectures in Object-Oriented Programming using C++</li>
+                <li>Designed assignments, assessments, and practical coding labs</li>
+                <li>Implemented student engagement techniques and formative assessment tools</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Senior Research Assistant (AI-Security)</h3>
+              <span class="timeline-date">Jul 2023–Jan 2024 | University of Southampton</span>
+              <ul>
+                <li>Led a team to create a NER dataset for cyber-attack attribution</li>
+                <li>Developed methods and metrics for dataset quality assessment</li>
+                <li>Ensured dataset suitability for training NER models in cybersecurity</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>AI Intern</h3>
+              <span class="timeline-date">Mar 2022–Sep 2022 | Momentone</span>
+              <ul>
+                <li>Built a mental health chatbot using Rasa and HuggingFace transformers</li>
+                <li>Developed NLP solutions for mental health support</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Lecturer</h3>
+              <span class="timeline-date">Aug 2018–Sep 2019 | Royal Global University, Assam</span>
+              <ul>
+                <li>Taught Python, C++ OOP, Data Structures, and Algorithms</li>
+                <li>Supervised undergraduate projects and contributed to curriculum development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- <section class="fade-in" id="contact">
+        <h2><i class="fas fa-paper-plane"></i> Get In Touch</h2>
+        <div class="contact-form-wrapper">
+          <form id="contact-form" action="https://formspree.io/f/mzdjpyve" method="POST">
+            <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+              <input type="text" id="subject" name="subject" required placeholder="Research collaboration?">
+            </div>
+            <div class="form-group">
+              <label for="message"><i class="fas fa-comment"></i> Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-send"></i> Send Message
+            </button>
+          </form>
+          <div id="form-status"></div>
+        </div>
+      </section>
+    </main>
+  </div> -->
+  
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+  <footer>
+    <div class="container">
+      <div class="view-counter">
+        <i class="fas fa-eye"></i> Page views: <span id="view-count">Loading...</span>
+      </div>
+      <p>&copy; <span id="current-year">2026</span> Xiomara Gonzalez · Last updated: <span id="last-updated">Loading...</span></p>
+      <!-- <div class="social-footer">
+        <a href="https://github.com/pritamdeka" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://huggingface.co/pritamdeka" target="_blank"><i class="fab fa-huggingface"></i></a>
+        <a href="https://www.linkedin.com/in/pritam-deka-phd-9158251b8/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://scholar.google.com/citations?user=b0jYTAUAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+      </div> -->
+    </div>
+  </footer>
+  
+  <!-- Particle Background -->
+  <!--<canvas id="particles-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1;"></canvas>-->
+
+  <script src="dynamic.js"></script>
+</body>
 </html>
