@@ -7,6 +7,65 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="style-dynamic.css">
   <link rel="icon" href="logo.png" type="image/png">
+
+  <!-- Small page-specific additions (figure + palette accents). Reuses the variables in style-dynamic.css,
+       so light/dark mode works automatically. You can move this block into style-dynamic.css if you like. -->
+  <style>
+    /* Palette from your color-scheme image */
+    .teaching-page {
+      --c-ice: #DDE6F3;
+      --c-blue: #7FA4C8;
+      --c-lilac: #B59BC8;
+      --c-pink: #D08AB6;
+      --c-green: #8FB79B;
+      --c-violet: #6A5A8F;
+      --c-plum: #3F345B;
+    }
+
+    /* The whole page is one long card, so skip the hover "lift" used on shorter sections */
+    .main-container > section.teaching-page:hover { transform: none; box-shadow: 0 2px 10px var(--shadow); }
+
+    .teaching-page .lede { color: var(--text-muted); margin-top: 0; }
+    .teaching-page h2 { margin-top: 2.2rem; }
+    .teaching-page h2:first-of-type { margin-top: 1.5rem; }
+    .teaching-page h3.sub { color: var(--text-primary); font-size: 1.1rem; margin: 1.2rem 0 .3rem; }
+
+    /* Gradient underline on section headings, using the palette */
+    .teaching-page h2 {
+      border-bottom: 3px solid transparent;
+      border-image: linear-gradient(90deg, var(--c-blue), var(--c-lilac), var(--c-pink)) 1;
+    }
+
+    /* Accent colors for cards */
+    .degree-card.c-blue   { border-left-color: var(--c-blue); }
+    .degree-card.c-green  { border-left-color: var(--c-green); }
+    .degree-card.c-pink   { border-left-color: var(--c-pink); }
+    .degree-card.c-violet { border-left-color: var(--c-violet); }
+    .activity-card:nth-child(1) .activity-icon { color: var(--c-blue); }
+    .activity-card:nth-child(2) .activity-icon { color: var(--c-pink); }
+    .activity-card:nth-child(3) .activity-icon { color: var(--c-green); }
+    .activity-card:nth-child(1):hover { border-color: var(--c-blue); }
+    .activity-card:nth-child(2):hover { border-color: var(--c-pink); }
+    .activity-card:nth-child(3):hover { border-color: var(--c-green); }
+
+    .citation { margin: 0; font-size: .95rem; }
+
+    /* Figure */
+    .tp-figure {
+      margin: 1.5rem 0;
+      background: var(--bg-primary);
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+    }
+    .tp-figure svg { display: block; width: 100%; height: auto; }
+    .tp-figure figcaption { color: var(--text-muted); font-size: .9rem; margin-top: .6rem; text-align: center; }
+    .fig-title { fill: var(--text-primary); font-weight: 700; font-size: 15px; }
+    .fig-step  { fill: var(--text-muted); font-size: 13px; font-style: italic; }
+    .fig-label { font-size: 14px; font-weight: 600; }
+    .fig-dark  { fill: #3F345B; }
+    .fig-light { fill: #ffffff; }
+  </style>
 </head>
 
 <body class="light-mode">
@@ -28,10 +87,220 @@
 </nav>
 
 <div class="main-container">
-<section class="fade-in">
+<section class="fade-in teaching-page">
+
+  <!-- <p class="lede">Helping students build strong foundations so they can carve their own paths.</p> -->
+
+  <!-- ===================== PHILOSOPHY ===================== -->
+  <h2><i class="fas fa-lightbulb"></i>Teaching Philosophy</h2>
+
+  <h3 class="sub">What gives teaching meaning to me</h3>
+  <p>
+    Teaching is an opportunity to encourage students to carve their own path. When students truly learn the
+    fundamental concepts in engineering, science, and math, they can explore any course that interests them and
+    go all in. For me, teaching is a chance to build students&rsquo; confidence, to help those who feel behind
+    &ldquo;catch up,&rdquo; and to show that paths are not linear.
+  </p>
+
+  <h3 class="sub">Why it matters that students achieve their learning goals</h3>
+  <p>
+    Fully understanding foundational concepts is essential for succeeding in subsequent courses. As an
+    undergraduate, I experienced firsthand how gaps in understanding can make upper-division courses
+    extremely difficult. Research suggests that students enjoy courses and projects more when they grasp the
+    fundamentals and can apply them: the work they present is deeper, and their satisfaction is higher when
+    they feel they got something useful out of the course.
+  </p>
+
+  <!-- ===================== FIGURE ===================== -->
+  <figure class="tp-figure">
+    <svg viewBox="0 0 760 380" role="img" aria-labelledby="fig-t fig-d" xmlns="http://www.w3.org/2000/svg">
+      <title id="fig-t">From foundations to many paths</title>
+      <desc id="fig-d">Three foundational areas (engineering, science, and math) feed into student confidence, which branches into several non-linear paths: upper-division courses, research and projects, industry and careers, and unexpected directions.</desc>
+
+      <defs>
+        <linearGradient id="hubGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#B59BC8"/>
+          <stop offset="100%" stop-color="#D08AB6"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Column headings -->
+      <text class="fig-title" x="105" y="40" text-anchor="middle">Foundations</text>
+      <text class="fig-title" x="640" y="22" text-anchor="middle">Your own path</text>
+
+      <!-- Foundation blocks -->
+      <g class="fig-label">
+        <rect x="30" y="70" width="150" height="48" rx="12" fill="#DDE6F3" stroke="#7FA4C8" stroke-width="2"/>
+        <text class="fig-dark" x="105" y="99" text-anchor="middle">Engineering</text>
+        <rect x="30" y="156" width="150" height="48" rx="12" fill="#DDE6F3" stroke="#7FA4C8" stroke-width="2"/>
+        <text class="fig-dark" x="105" y="185" text-anchor="middle">Science</text>
+        <rect x="30" y="242" width="150" height="48" rx="12" fill="#DDE6F3" stroke="#7FA4C8" stroke-width="2"/>
+        <text class="fig-dark" x="105" y="271" text-anchor="middle">Math</text>
+      </g>
+
+      <!-- Foundations -> hub -->
+      <g fill="none" stroke="#7FA4C8" stroke-width="3" stroke-linecap="round">
+        <path d="M180 94 C 230 94, 250 150, 288 172"/>
+        <path d="M180 180 L 282 180"/>
+        <path d="M180 266 C 230 266, 250 210, 288 188"/>
+      </g>
+
+      <!-- Hub: confidence -->
+      <circle cx="326" cy="180" r="44" fill="url(#hubGrad)" stroke="#6A5A8F" stroke-width="3"/>
+      <text class="fig-label fig-dark" x="326" y="185" text-anchor="middle">Confidence</text>
+
+      <!-- Non-linear paths: hub -> destinations -->
+      <g fill="none" stroke-width="4" stroke-linecap="round">
+        <path d="M368 166 C 430 120, 430 60, 532 66"   stroke="#7FA4C8"/>
+        <path d="M370 176 C 420 110, 450 200, 532 146" stroke="#8FB79B"/>
+        <path d="M370 186 C 420 250, 450 160, 532 226" stroke="#D08AB6"/>
+        <path d="M366 198 C 400 330, 470 250, 532 306" stroke="#6A5A8F"/>
+      </g>
+
+      <!-- Dashed "catch up" loop -->
+      <path d="M326 226 C 300 300, 240 330, 215 300" fill="none" stroke="#B59BC8"
+            stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round"/>
+      <text class="fig-step" x="232" y="334">catching up is part of the path</text>
+
+      <!-- Destinations -->
+      <g class="fig-label">
+        <rect x="540" y="42"  width="200" height="48" rx="12" fill="#7FA4C8"/>
+        <text class="fig-dark"  x="640" y="71"  text-anchor="middle">Upper-division courses</text>
+
+        <rect x="540" y="122" width="200" height="48" rx="12" fill="#8FB79B"/>
+        <text class="fig-dark"  x="640" y="151" text-anchor="middle">Research &amp; projects</text>
+
+        <rect x="540" y="202" width="200" height="48" rx="12" fill="#D08AB6"/>
+        <text class="fig-dark"  x="640" y="231" text-anchor="middle">Industry &amp; careers</text>
+
+        <rect x="540" y="282" width="200" height="48" rx="12" fill="#6A5A8F"/>
+        <text class="fig-light" x="640" y="311" text-anchor="middle">Unexpected directions</text>
+      </g>
+
+      <!-- Bottom step labels -->
+      <text class="fig-step" x="105" y="362" text-anchor="middle">1. Learn the fundamentals</text>
+      <text class="fig-step" x="326" y="362" text-anchor="middle">2. Build confidence</text>
+      <text class="fig-step" x="640" y="362" text-anchor="middle">3. Explore: paths aren&rsquo;t linear</text>
+    </svg>
+    <figcaption>My teaching approach: strong fundamentals build confidence, and confidence opens many non-linear paths.</figcaption>
+  </figure>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <h2><i class="fas fa-chalkboard-teacher"></i>Teaching Experience</h2>
+
+  <div class="degree-card">
+    <div class="degree-header">
+      <h3>Graduate Teaching Assistant, BME 303: Introduction to Computing</h3>
+    </div>
+    <div class="edu-meta">
+      <span><i class="fas fa-building-columns"></i>Department of Biomedical Engineering , The University of Texas at Austin</span>
+      <span class="edu-date"><i class="fas fa-calendar"></i>Fall 2023 &amp; Fall 2025</span>
+    </div>
+    <ul class="edu-bullets">
+      <li>Led three laboratory sections (~20 students each) for an 85-student undergraduate course on programming in C++ and Python.</li>
+      <li>Developed interactive and engaging lab material, including gamified review problems.</li>
+      <li>Supported course instruction and administrative tasks.</li>
+    </ul>
+  </div>
+
+  <!-- ===================== TRAINING ===================== -->
+  <h2><i class="fas fa-graduation-cap"></i>Teaching Preparation &amp; Training</h2>
+
+  <div class="degree-card c-blue">
+    <div class="degree-header">
+      <h3>Graduate Certificate in Engineering Education</h3>
+    </div>
+    <div class="edu-meta">
+      <span><i class="fas fa-building-columns"></i>The University of Texas at Austin</span>
+      <span class="edu-date"><i class="fas fa-calendar"></i>Anticipated 2027</span>
+    </div>
+    <div class="skills-grid" style="margin-top:0;">
+      <span class="skill-tag">Curriculum Design &amp; Assessment in Engineering</span>
+      <span class="skill-tag">Interdisciplinary, Transdisciplinary &amp; Hybrid Learning</span>
+      <span class="skill-tag">Teaching Engineering</span>
+      <span class="skill-tag">Engineering Teaching Practicum</span>
+    </div>
+  </div>
+
+  <div class="degree-card c-green">
+    <div class="degree-header">
+      <h3>Additional Certificates</h3>
+    </div>
+    <ul class="edu-bullets">
+      <li>UT Austin Inclusive Classrooms Leadership Certificate</li>
+      <li>UT Austin Center for Teaching and Learning Teaching Preparation Certificate</li>
+    </ul>
+  </div>
+
+  <!-- ===================== EDU RESEARCH ===================== -->
+  <h2><i class="fas fa-flask"></i>Engineering Education Research</h2>
+
+  <p>
+    My teaching is informed by my work in engineering education research. With the Center for Equity in
+    Engineering at UT Austin, I explored how open-source large language models can streamline qualitative
+    data analysis. A related preprint applies LLM-assisted sentiment analysis to students&rsquo; written
+    reflections:
+  </p>
+  <div class="degree-card c-pink">
+    <p class="citation">
+      Gonzalez XT, Flemming GC, Katz A, Denton M, Deters J. <em>LLM-assisted sentiment analysis for integrated
+      computational and qualitative mixed methods education research: A case study of students&rsquo; written
+      reflection assignments.</em> 2026.
+      <a href="https://arxiv.org/abs/2605.27403">arXiv:2605.27403</a>
+    </p>
+  </div>
+
+  <!-- ===================== MENTORING ===================== -->
+  <h2><i class="fas fa-hands-helping"></i>Mentoring &amp; Outreach</h2>
+
+  <div class="activity-grid">
+    <div class="activity-card">
+      <div class="activity-icon"><i class="fas fa-user-group"></i></div>
+      <h3>Graduate Student Mentor</h3>
+      <p>Society for Advancing Gender Equity in STEM (SAGES)<br>2023&ndash;2025</p>
+      <ul class="activity-list">
+        <li>Mentored across four cycles (Spring 2023&ndash;Fall 2024)</li>
+      </ul>
+    </div>
+    <div class="activity-card">
+      <div class="activity-icon"><i class="fas fa-laptop-code"></i></div>
+      <h3>Application Reviewer</h3>
+      <p>NCWIT Aspirations in Computing Awards<br>2016&ndash;present</p>
+      <ul class="activity-list">
+        <li>Review high school-level award applications as an alumna</li>
+      </ul>
+    </div>
+    <div class="activity-card">
+      <div class="activity-icon"><i class="fas fa-people-group"></i></div>
+      <h3>Vice President &amp; Webmaster</h3>
+      <p>Society of Hispanic Professional Engineers, UC Berkeley<br>2017&ndash;2019</p>
+      <ul class="activity-list">
+        <li>Advised on highly attended events, including a graduate school workshop series and K-12 outreach</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===================== EDU RESEARCH =====================
+  <h2><i class="fas fa-flask"></i>Engineering Education Research</h2>
+
+  <p>
+    My teaching is informed by my work in engineering education research. With the Center for Equity in
+    Engineering at UT Austin, I explored how open-source large language models can streamline qualitative
+    data analysis. A related preprint applies LLM-assisted sentiment analysis to students&rsquo; written
+    reflections:
+  </p>
+  <div class="degree-card c-pink">
+    <p class="citation">
+      Gonzalez XT, Flemming GC, Katz A, Denton M, Deters J. <em>LLM-assisted sentiment analysis for integrated
+      computational and qualitative mixed methods education research: A case study of students&rsquo; written
+      reflection assignments.</em> 2026.
+      <a href="https://arxiv.org/abs/2605.27403">arXiv:2605.27403</a>
+    </p>
+  </div> -->
+
 </section>
-</div>  
-  
+</div>
+
 <footer>
 <div class="container">
     <div class="view-counter">
