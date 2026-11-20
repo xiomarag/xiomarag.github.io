@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xiomara Gonzalez | Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style-dynamic.css">
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <!-- Page-specific additions (figures, theme blocks, palette accents). Reuses the variables in
+       style-dynamic.css, so light/dark mode works automatically. -->
+  <style>
+    .research-page {
+      --c-ice: #DDE6F3;
+      --c-blue: #7FA4C8;
+      --c-lilac: #B59BC8;
+      --c-pink: #D08AB6;
+      --c-green: #8FB79B;
+      --c-violet: #6A5A8F;
+      --c-plum: #3F345B;
+    }
+    .main-container > section.research-page:hover { transform: none; box-shadow: 0 2px 10px var(--shadow); }
+
+    .research-page .lede { color: var(--text-muted); margin-top: 0; font-size: 1.15rem; }
+    .research-page h2 {
+      margin-top: 2.4rem;
+      border-bottom: 3px solid transparent;
+      border-image: linear-gradient(90deg, var(--c-blue), var(--c-lilac), var(--c-pink)) 1;
+    }
+    .research-page h2:first-of-type { margin-top: 1.5rem; }
+
+    /* Accent colors for cards */
+    .degree-card.c-blue   { border-left-color: var(--c-blue); }
+    .degree-card.c-green  { border-left-color: var(--c-green); }
+    .degree-card.c-pink   { border-left-color: var(--c-pink); }
+    .degree-card.c-violet { border-left-color: var(--c-violet); }
+
+    /* Research theme blocks */
+    .theme-block {
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--c-blue);
+      border-radius: 12px;
+      padding: 1.3rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    .theme-block.t-blue   { border-left-color: var(--c-blue); }
+    .theme-block.t-pink   { border-left-color: var(--c-pink); }
+    .theme-block.t-green  { border-left-color: var(--c-green); }
+    .theme-block.t-violet { border-left-color: var(--c-violet); }
+    .theme-block h3 { margin: 0 0 .4rem; color: var(--text-primary); font-size: 1.2rem; }
+    .theme-block h3 i { margin-right: .5em; }
+    .theme-block.t-blue h3 i   { color: var(--c-blue); }
+    .theme-block.t-pink h3 i   { color: var(--c-pink); }
+    .theme-block.t-green h3 i  { color: var(--c-green); }
+    .theme-block.t-violet h3 i { color: var(--c-violet); }
+    .theme-block > p { margin: .3rem 0 .8rem; }
+    .theme-block .skills-grid { margin: .2rem 0 1rem; }
+    .theme-block .skill-tag { font-size: .8rem; padding: .3rem .8rem; }
+    .theme-block .paper-item { background: var(--bg-secondary); }
+    .theme-block .paper-year { min-width: 60px; }
+    .type-chip {
+      display: inline-block; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em;
+      padding: .1rem .5rem; border-radius: 10px; margin-left: .4rem; vertical-align: middle;
+      background: var(--nav-hover); color: var(--text-secondary);
+    }
+    .more-link { text-align: center; margin-top: 1.5rem; }
+
+    /* Figures */
+    .rp-figure {
+      margin: 1.5rem 0;
+      background: var(--bg-primary);
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+    }
+    .rp-figure svg { display: block; width: 100%; height: auto; }
+    .rp-figure figcaption { color: var(--text-muted); font-size: .9rem; margin-top: .6rem; text-align: center; }
+    .fig-title { fill: var(--text-primary); font-weight: 700; font-size: 15px; }
+    .fig-note  { fill: var(--text-muted); font-size: 12px; font-style: italic; }
+    .fig-row   { fill: var(--text-primary); font-size: 13px; font-weight: 700; }
+    .fig-tick  { fill: var(--text-muted); font-size: 12px; }
+    .fig-dot-label { fill: var(--text-muted); font-size: 11px; }
+    .fig-grid  { stroke: var(--border); stroke-width: 1.5; }
+    .fig-label { font-size: 15px; font-weight: 700; }
+    .fig-sub   { font-size: 12.5px; }
+    .fig-dark  { fill: #3F345B; }
+    .dot-hollow { fill: var(--bg-primary); stroke-width: 3; }
+  </style>
+</head>
+
+<body class="light-mode">
+ <!-- Mobile Breadcrumb -->
+<div class="mobile-breadcrumb">
+<a href="index.html">Home</a>
+<span class="separator">/</span>
+<span class="current">Research</span>
+</div>
+
+<nav>
+<a href="index.html">About</a>
+<a href="https://app.box.com/s/w6vire4f7tfja1dbvzyuale6eivg22jy" target="_blank" rel="noreferrer noopener">CV</a>
+<a href="publications.html">Publications</a>
+<a href="research.html" class="active">Research</a>
+<a href="teaching.html">Teaching</a>
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+</button>
+</nav>
+
+<div class="main-container">
+<section class="fade-in research-page">
+
+  <!-- <p class="lede">I build scalable tools and run mixed-methods studies to help people make sense of health information, especially information found online and generated by AI.</p> -->
+
+  <!-- ===================== OVERVIEW ===================== -->
+  <h2><i class="fas fa-compass"></i>Research Overview</h2>
+
+  <p>
+    People increasingly turn to search engines, social media, and AI chatbots to understand their health, and
+    that information is often overwhelming, inconsistent, and hard to interpret. My research combines machine
+    learning and multimedia (text, image, and video) processing with qualitative and quantitative methods to
+    do two things in parallel: <strong>build tools</strong> that help users synthesize what their online health information exposure,
+    and <strong>understand people</strong>: their attitudes, perceptions, and needs around online and
+    AI-generated health information. Each strand informs the other, with the goal of supporting informed,
+    equitable shared decision making.
+  </p>
+
+  <!-- ===================== FIGURE 1 ===================== -->
+  <figure class="rp-figure">
+    <svg viewBox="0 0 760 400" role="img" aria-labelledby="f1-t f1-d" xmlns="http://www.w3.org/2000/svg">
+      <title id="f1-t">Research overview</title>
+      <desc id="f1-d">Health information found online (search results, AI chatbots, images and video) feeds two linked strands: building scalable tools, and understanding people. Together they support informed, equitable health decisions.</desc>
+      <defs>
+        <linearGradient id="hubGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#B59BC8"/>
+          <stop offset="100%" stop-color="#D08AB6"/>
+        </linearGradient>
+        <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" fill="#9C84BD"/>
+        </marker>
+      </defs>
+
+      <!-- Input -->
+      <rect x="20" y="150" width="170" height="100" rx="14" fill="#DDE6F3" stroke="#7FA4C8" stroke-width="2"/>
+      <text class="fig-label fig-dark" x="105" y="188" text-anchor="middle">Health information</text>
+      <text class="fig-sub fig-dark" x="105" y="212" text-anchor="middle">search results, AI chatbots</text>
+      <text class="fig-sub fig-dark" x="105" y="230" text-anchor="middle">images &amp; video</text>
+
+      <!-- Lane 1: tools -->
+      <rect x="250" y="30" width="250" height="110" rx="14" fill="#7FA4C8"/>
+      <text class="fig-label fig-dark" x="375" y="62" text-anchor="middle">Build scalable tools</text>
+      <text class="fig-sub fig-dark" x="375" y="86" text-anchor="middle">text, image, &amp; video processing</text>
+      <text class="fig-sub fig-dark" x="375" y="104" text-anchor="middle">large multimodal models</text>
+      <text class="fig-sub fig-dark" x="375" y="122" text-anchor="middle">synthesize what people find online</text>
+
+      <!-- Lane 2: people -->
+      <rect x="250" y="260" width="250" height="100" rx="14" fill="#8FB79B"/>
+      <text class="fig-label fig-dark" x="375" y="292" text-anchor="middle">Understand people</text>
+      <text class="fig-sub fig-dark" x="375" y="316" text-anchor="middle">mixed-methods research</text>
+      <text class="fig-sub fig-dark" x="375" y="334" text-anchor="middle">perception studies</text>
+
+      <!-- Cross-link between lanes -->
+      <path d="M375 144 L375 256" fill="none" stroke="#B59BC8" stroke-width="2.5" stroke-dasharray="6 6"
+            marker-start="url(#arr)" marker-end="url(#arr)"/>
+      <text class="fig-note" x="388" y="205">each informs the other</text>
+
+      <!-- Arrows in -->
+      <g fill="none" stroke="#9C84BD" stroke-width="3" stroke-linecap="round">
+        <path d="M192 185 C 222 185, 222 85, 246 85" marker-end="url(#arr)"/>
+        <path d="M192 215 C 222 215, 222 315, 246 315" marker-end="url(#arr)"/>
+        <path d="M502 85 C 535 85, 545 140, 558 160" marker-end="url(#arr)"/>
+        <path d="M502 315 C 535 315, 545 260, 558 240" marker-end="url(#arr)"/>
+      </g>
+
+      <!-- Outcome hub -->
+      <circle cx="640" cy="200" r="88" fill="url(#hubGrad)" stroke="#6A5A8F" stroke-width="3"/>
+      <text class="fig-label fig-dark" x="640" y="190" text-anchor="middle">Informed,</text>
+      <text class="fig-label fig-dark" x="640" y="212" text-anchor="middle">equitable</text>
+      <text class="fig-label fig-dark" x="640" y="234" text-anchor="middle">decision making</text>
+    </svg>
+    <!-- <figcaption>Two linked strands of my research: building tools and understanding people.</figcaption> -->
+  </figure>
+
+  <!-- ===================== THEMES ===================== -->
+  <h2><i class="fas fa-layer-group"></i>Research Themes</h2>
+
+  <!-- Theme 1 -->
+  <div class="theme-block t-blue">
+    <h3><i class="fas fa-magnifying-glass"></i>Online Health Information &amp; AI-Generated Content</h3>
+    <p>
+      What do patients encounter when they search online, and how well does AI-generated content serve them?
+      I study the information people are exposed to, using breast reconstruction as a central case study, and
+      explore how it reaches users and how tools can help them synthesize it.
+    </p>
+    <ul class="papers-list">
+      <li class="paper-item">
+        <span class="paper-year">2026</span>
+        <div class="paper-content">
+          <span class="paper-title">Beyond mobile phones: Opportunities for smart TVs in Femtech</span>
+          <span class="paper-authors"><strong>XT Gonzalez</strong>, Dickey RM, Upshaw SJ, Markey MK.</span>
+          <span class="paper-venue">Frontiers in Global Women's Health 7:1866038</span>
+        </div>
+        <a href="https://www.frontiersin.org/journals/global-womens-health/articles/10.3389/fgwh.2026.1866038/full" target="_blank" class="paper-link"><i class="fa-solid fa-link"></i></a>
+      </li>
+      <li class="paper-item">
+        <span class="paper-year">2026</span>
+        <div class="paper-content">
+          <span class="paper-title">Summarizing online health information exposure using large multimodal models <span class="type-chip">Poster &amp; Talk</span></span>
+          <span class="paper-authors"><strong>XT Gonzalez</strong>, Dickey RM, Markey MK.</span>
+          <span class="paper-venue">Texas Advanced Computing Center (TACC) Symposium</span>
+        </div>
+        <a href="https://doi.org/10.26153/tsw/65055" target="_blank" class="paper-link"><i class="fa-solid fa-link"></i></a>
+      </li>
+      <li class="paper-item">
+        <span class="paper-year">2025</span>
+        <div class="paper-content">
+          <span class="paper-title">Assessment of appearance-related questions about breast reconstruction generated by ChatGPT</span>
+          <span class="paper-authors"><strong>XT Gonzalez</strong>, MS Roubaud, MV Schaverien, RD Largo, CS Parham, AM Francis, TA Chen, AS Hoffman, RM Dickey, MK Markey, GP Reece.</span>
+          <span class="paper-venue">Plastic and Reconstructive Surgery – Global Open 13(3):e6625</span>
+        </div>
+        <a href="https://journals.lww.com/prsgo/fulltext/2025/03000/assessment_of_appearance_related_questions_about.74.aspx?context=latestarticles" target="_blank" class="paper-link"><i class="fa-solid fa-link"></i></a>
+      </li>
+      <li class="paper-item">
+        <span class="paper-year">2022</span>
+        <div class="paper-content">
+          <span class="paper-title">What does “Dr. Google” show patients searching for breast reconstruction outcomes photographs?</span>
+          <span class="paper-authors">KM Nicklaus, <strong>XT Gonzalez</strong>, K Sachdev, J Liu, D Chopra, AS Hoffman, SE Hanson, MK Markey, GP Reece.</span>
+          <span class="paper-venue">Plastic and Reconstructive Surgery – Global Open 10(5):e4331</span>
+        </div>
+        <a href="https://app.box.com/s/8rzn16ydi8endsh8pt9w5repmidyimy7" target="_blank" class="paper-link"><i class="fa-regular fa-file-pdf"></i></a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Theme 2 -->
+  <div class="theme-block t-pink">
+    <h3><i class="fas fa-comments"></i>Patient &amp; Public Perspectives on AI in Healthcare</h3>
+    <p>
+      How do patients, survivors, and the public view AI in their care and the outcomes they may experience?
+      I use mixed-methods studies and evidence synthesis to understand attitudes and perceptions that should
+      shape how clinical AI is designed and communicated.
+    </p>
+    <ul class="papers-list">
+      <li class="paper-item">
+        <span class="paper-year">2025</span>
+        <div class="paper-content">
+          <span class="paper-title">Breast cancer survivors’ perceptual map of breast reconstruction appearance outcomes</span>
+          <span class="paper-authors">H Wang, <strong>XT Gonzalez</strong>, GA Renta Lopez, MC Bordes, MC Hout, SW Choi, GP Reece, MK Markey.</span>
+          <span class="paper-venue">Journal of Medical Imaging 12(5):051802</span>
+        </div>
+        <a href="https://www.spiedigitallibrary.org/journals/journal-of-medical-imaging/volume-12/issue-5/051802/Breast-cancer-survivors-perceptual-map-of-breast-reconstruction-appearance-outcomes/10.1117/1.JMI.12.5.051802.short" target="_blank" class="paper-link"><i class="fa-solid fa-link"></i></a>
+      </li>
+      <li class="paper-item">
+        <span class="paper-year">2025</span>
+        <div class="paper-content">
+          <span class="paper-title">Just another tool in their repertoire: Uncovering insights into public and patient perspectives on clinicians’ use of machine learning in perioperative care</span>
+          <span class="paper-authors"><strong>XT Gonzalez</strong>, K Steger-May, J Abraham.</span>
+          <span class="paper-venue">Journal of the American Medical Informatics Association 32(1):150-162</span>
+        </div>
+        <a href="https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocae257/7821242" target="_blank" class="paper-link"><i class="fa-solid fa-link"></i></a>
+      </li>
+      <li class="paper-item">
+        <span class="paper-year">2024</span>
+        <div class="paper-content">
+          <span class="paper-title">Machine learning-augmented interventions in perioperative care: A systematic review and meta-analysis</span>
+          <span class="paper-authors">D Mehta, <strong>XT Gonzalez</strong>, G Huang, J Abraham.</span>
+          <span class="paper-venue">British Journal of Anaesthesia 133(6):1159-1172</span>
+        </div>
+        <a href="https://www.bjanaesthesia.org/article/S0007-0912(24)00473-2/fulltext" target="_blank" class="paper-link"><i class="fa-solid fa-link"></i></a>
+      </li>
+    </ul>
+  </div>
+
+ <!-- Theme 3 -->
+  <h2><i class="fas fa-compass"></i>Engineering Education Research</h2>
+  <p>
+  </p>
+  <div class="theme-block t-green">
+    <!-- <h3><i class="fas fa-robot"></i>Engineering Education Research</h3> -->
+    <p>
+      Qualitative analysis is rich but labor-intensive. With the Center for Equity in Engineering at UT Austin,
+      I explored how open-source large language models (e.g., Llama 3) can streamline and automate steps of
+      qualitative data analysis pipelines, including a case study of students&rsquo; written reflections.
+    </p>
+    <ul class="papers-list">
+      <li class="paper-item">
+        <span class="paper-year">2026</span>
+        <div class="paper-content">
+          <span class="paper-title">LLM-assisted sentiment analysis for integrated computational and qualitative mixed methods education research: A case study of students’ written reflection assignments <span class="type-chip">Preprint</span></span>
+          <span class="paper-authors"><strong>XT Gonzalez</strong>, GC Flemming, A Katz, M Denton, J Deters.</span>
+          <span class="paper-venue">arXiv:2605.27403</span>
+        </div>
+        <a href="https://arxiv.org/abs/2605.27403" target="_blank" class="paper-link"><i class="fa-solid fa-link"></i></a>
+      </li>
+    </ul>
+  </div>
+  <!-- ===================== FUNDING ===================== -->
+  <h2><i class="fas fa-award"></i>Competitive and Research Fellowships</h2>
+
+  <div class="degree-card">
+    <ul class="edu-bullets">
+      <li><strong>NIH-NLM F31</strong> Ruth L. Kirschstein National Research Service Award, 2027&ndash;2029</li>
+      <li><strong>UT Tolbert Endowed Fellowship</strong> in Electrical and Computer Engineering, 2021, 2025&ndash;2027</li>
+      <li><strong>NIH-NIBIB T32</strong> Ruth L. Kirschstein National Research Service Award, 2022&ndash;2023</li>
+      <li><strong>UT Thrust 2000 &ndash; W.H. Cunningham Endowed Graduate Fellowship</strong> in Engineering, 2021&ndash;2025</li>
+    </ul>
+  </div>
+  <!-- Theme 4 -->
+   <h2><i class="fas fa-compass"></i>Undergraduate Work</h2>
+
+  <div class="theme-block t-violet">
+    <h3><i class="fas fa-microscope"></i>Imaging &amp; Machine Learning</h3>
+    <p>
+      As an undergraduate at UC Berkeley, I worked at Lawrence Berkeley National Laboratory&rsquo;s Advanced Light
+      Source. I primarily focused on using mixed-scale dense deep convolutional neural network to automate fiber center
+      detection in micro-CT datasets of ceramic-matrix composites, a material used in gas turbines.
+    </p>
+    <ul class="papers-list">
+      <li class="paper-item">
+        <span class="paper-year">2019</span>
+        <div class="paper-content">
+          <span class="paper-title">Automating fiber detection in ceramic-matrix composites using a mixed-scale dense deep convolutional neural network<span class="type-chip">Poster</span></span>
+          <span class="paper-authors"><strong>XT Gonzalez</strong>, JML MacNeil, DM Ushizima, HS Barnard, DY Parkinson.</span>
+          <span class="paper-venue">UC Berkeley LSAMP Summer Research Symposium</span>
+        </div>
+      </li>
+      <li class="paper-item">
+        <span class="paper-year">2018</span>
+        <div class="paper-content">
+          <span class="paper-title">Three-dimensional visualizations of ceramic-matrix composites in controlled environments<span class="type-chip">Poster</span></span>
+          <span class="paper-authors"><strong>XT Gonzalez</strong>, D Pelt, J Sethian, T Perciano, D Ushizima, H Barnard, D Parkinson.</span>
+          <span class="paper-venue">Society of Hispanic Professional Engineers (SHPE) National Conference, Engineering Science Symposium</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="more-link">
+    <a class="activity-link" href="publications.html"><i class="fas fa-book-open"></i> See all publications</a>
+  </div>
+
+  <!-- ===================== FIGURE 2 ===================== -->
+  <!-- <h2><i class="fas fa-timeline"></i>Research Over Time</h2>
+
+  <figure class="rp-figure">
+    <svg viewBox="0 0 760 400" role="img" aria-labelledby="f2-t f2-d" xmlns="http://www.w3.org/2000/svg">
+      <title id="f2-t">Research output by theme, 2018 to 2026</title>
+      <desc id="f2-d">A timeline with one row per research theme. Filled dots are journal articles; hollow dots are posters, preprints, or projects. Online health information: 2022, 2023, 2024, 2025, and two in 2026. Patient perspectives on AI: 2023, 2024, and two in 2025. LLMs for qualitative research: 2024 and 2026. Earlier imaging and machine learning work: 2018 and 2019.</desc>
+
+ 
+      <rect x="10" y="22"  width="740" height="76" rx="12" fill="#7FA4C8" opacity=".16"/>
+      <rect x="10" y="102" width="740" height="76" rx="12" fill="#D08AB6" opacity=".16"/>
+      <rect x="10" y="182" width="740" height="76" rx="12" fill="#8FB79B" opacity=".18"/>
+      <rect x="10" y="262" width="740" height="76" rx="12" fill="#6A5A8F" opacity=".16"/>
+      <rect x="10" y="22"  width="6" height="76" rx="3" fill="#7FA4C8"/>
+      <rect x="10" y="102" width="6" height="76" rx="3" fill="#D08AB6"/>
+      <rect x="10" y="182" width="6" height="76" rx="3" fill="#8FB79B"/>
+      <rect x="10" y="262" width="6" height="76" rx="3" fill="#6A5A8F"/>
+
+      <text class="fig-row" x="28" y="56"><tspan x="28" dy="0">Online health info &amp;</tspan><tspan x="28" dy="17">AI-generated content</tspan></text>
+      <text class="fig-row" x="28" y="136"><tspan x="28" dy="0">Patient perspectives</tspan><tspan x="28" dy="17">&amp; clinical AI</tspan></text>
+      <text class="fig-row" x="28" y="216"><tspan x="28" dy="0">LLMs for qualitative</tspan><tspan x="28" dy="17">&amp; education research</tspan></text>
+      <text class="fig-row" x="28" y="296"><tspan x="28" dy="0">Earlier work:</tspan><tspan x="28" dy="17">imaging &amp; ML</tspan></text>
+
+      <g>
+        <line class="fig-grid" x1="230"    y1="22" x2="230"    y2="338"/>
+        <line class="fig-grid" x1="288.75" y1="22" x2="288.75" y2="338"/>
+        <line class="fig-grid" x1="347.5"  y1="22" x2="347.5"  y2="338"/>
+        <line class="fig-grid" x1="406.25" y1="22" x2="406.25" y2="338"/>
+        <line class="fig-grid" x1="465"    y1="22" x2="465"    y2="338"/>
+        <line class="fig-grid" x1="523.75" y1="22" x2="523.75" y2="338"/>
+        <line class="fig-grid" x1="582.5"  y1="22" x2="582.5"  y2="338"/>
+        <line class="fig-grid" x1="641.25" y1="22" x2="641.25" y2="338"/>
+        <line class="fig-grid" x1="700"    y1="22" x2="700"    y2="338"/>
+      </g>
+      <g class="fig-tick" text-anchor="middle">
+        <text x="230"    y="358">2018</text>
+        <text x="288.75" y="358">2019</text>
+        <text x="347.5"  y="358">2020</text>
+        <text x="406.25" y="358">2021</text>
+        <text x="465"    y="358">2022</text>
+        <text x="523.75" y="358">2023</text>
+        <text x="582.5"  y="358">2024</text>
+        <text x="641.25" y="358">2025</text>
+        <text x="700"    y="358">2026</text>
+      </g>
+
+      <g text-anchor="middle">
+        <circle cx="465" cy="60" r="9" fill="#7FA4C8" stroke="#3F345B" stroke-width="2"><title>2022 · “Dr. Google” (journal article)</title></circle>
+        <text class="fig-dot-label" x="465" y="44">Dr. Google</text>
+
+        <circle class="dot-hollow" cx="523.75" cy="60" r="8" stroke="#7FA4C8"><title>2023 · Dr. Google poster, NIH-NIBIB Training Grantees Meeting</title></circle>
+        <text class="fig-dot-label" x="523.75" y="86">poster</text>
+
+        <circle class="dot-hollow" cx="582.5" cy="60" r="8" stroke="#7FA4C8"><title>2024 · ChatGPT posters, BMES and AI in Health</title></circle>
+        <text class="fig-dot-label" x="582.5" y="86">posters</text>
+
+        <circle cx="641.25" cy="60" r="9" fill="#7FA4C8" stroke="#3F345B" stroke-width="2"><title>2025 · ChatGPT appearance questions (journal article)</title></circle>
+        <text class="fig-dot-label" x="641.25" y="44">ChatGPT</text>
+
+        <circle cx="691" cy="60" r="9" fill="#7FA4C8" stroke="#3F345B" stroke-width="2"><title>2026 · Smart TVs in Femtech (journal article)</title></circle>
+        <text class="fig-dot-label" x="691" y="44">Smart TVs</text>
+
+        <circle class="dot-hollow" cx="711" cy="60" r="8" stroke="#7FA4C8"><title>2026 · TACC Symposium poster and talk</title></circle>
+        <text class="fig-dot-label" x="711" y="86">poster/talk</text>
+      </g>
+
+      <g text-anchor="middle">
+        <circle class="dot-hollow" cx="523.75" cy="140" r="8" stroke="#D08AB6"><title>2023 · Poster, Institute for Informatics, Data Science, and Bioinformatics</title></circle>
+        <text class="fig-dot-label" x="523.75" y="166">poster</text>
+
+        <circle cx="582.5" cy="140" r="9" fill="#D08AB6" stroke="#3F345B" stroke-width="2"><title>2024 · ML in perioperative care systematic review (journal article)</title></circle>
+        <text class="fig-dot-label" x="582.5" y="124">BJA review</text>
+
+        <circle cx="632" cy="140" r="9" fill="#D08AB6" stroke="#3F345B" stroke-width="2"><title>2025 · Public and patient perspectives on ML in perioperative care (journal article)</title></circle>
+        <text class="fig-dot-label" x="632" y="124">JAMIA</text>
+
+        <circle cx="651" cy="140" r="9" fill="#D08AB6" stroke="#3F345B" stroke-width="2"><title>2025 · Survivors’ perceptual map of reconstruction appearance outcomes (journal article)</title></circle>
+        <text class="fig-dot-label" x="655" y="166">Perceptual map</text>
+      </g>
+
+      <g text-anchor="middle">
+        <circle class="dot-hollow" cx="582.5" cy="220" r="8" stroke="#8FB79B"><title>2024 · Llama 3 for qualitative analysis, Center for Equity in Engineering (project)</title></circle>
+        <text class="fig-dot-label" x="582.5" y="246">Llama 3 project</text>
+
+        <circle class="dot-hollow" cx="700" cy="220" r="8" stroke="#8FB79B"><title>2026 · arXiv preprint</title></circle>
+        <text class="fig-dot-label" x="700" y="246">arXiv preprint</text>
+      </g>
+
+      <g text-anchor="middle">
+        <circle class="dot-hollow" cx="230" cy="300" r="8" stroke="#6A5A8F"><title>2018 · SHPE National Conference poster</title></circle>
+        <text class="fig-dot-label" x="230" y="326">poster</text>
+
+        <circle class="dot-hollow" cx="288.75" cy="300" r="8" stroke="#6A5A8F"><title>2019 · UC Berkeley LSAMP symposium poster</title></circle>
+        <text class="fig-dot-label" x="288.75" y="326">poster</text>
+      </g>
+
+      <circle cx="232" cy="384" r="7" fill="#B59BC8" stroke="#3F345B" stroke-width="2"/>
+      <text class="fig-tick" x="246" y="388">Journal article</text>
+      <circle class="dot-hollow" cx="370" cy="384" r="7" stroke="#B59BC8"/>
+      <text class="fig-tick" x="384" y="388">Poster, preprint, or project</text>
+    </svg>
+    <figcaption>Research output by theme. Hover over a dot for details.</figcaption>
+  </figure> -->
+
+</section>
+</div>
+
+<footer>
+<div class="container">
+    <div class="view-counter">
+    <!-- <i class="fas fa-eye"></i> Page views: <span id="view-count">Loading...</span> -->
+    </div>
+    <p>&copy; <span id="current-year">2026</span> Xiomara Gonzalez</p>
+</div>
+</footer>
+<script src="dynamic.js"></script>
+</body>
+</html>

@@ -65,6 +65,18 @@
     .fig-label { font-size: 14px; font-weight: 600; }
     .fig-dark  { fill: #3F345B; }
     .fig-light { fill: #ffffff; }
+
+    /* Class photo inside a teaching card */
+    .teaching-photo { margin: 1.2rem 0 0; }
+    .teaching-photo img {
+      display: block;
+      width: 75%;
+      height: auto;
+      margin: 0 auto;     /* this centers it */
+      border-radius: 10px;
+      border: 2px solid var(--border);
+    }
+    .teaching-photo figcaption { color: var(--text-muted); font-size: .9rem; margin-top: .5rem; text-align: center; }
   </style>
 </head>
 
@@ -78,8 +90,9 @@
 
 <nav>
 <a href="index.html">About</a>
-<a href="https://app.box.com/s/w6vire4f7tfja1dbvzyuale6eivg22jy">CV</a>
+<a href="https://app.box.com/s/w6vire4f7tfja1dbvzyuale6eivg22jy" target="_blank" rel="noreferrer noopener">CV</a>
 <a href="publications.html">Publications</a>
+<a href="research.html">Research</a>
 <a href="teaching.html" class="active">Teaching</a>
 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
     <i class="fas fa-moon"></i>
@@ -186,20 +199,44 @@
   </figure>
 
   <!-- ===================== EXPERIENCE ===================== -->
-  <h2><i class="fas fa-chalkboard-teacher"></i>Teaching Experience</h2>
+  <h2><i class="fas fa-chalkboard-teacher"></i>Graduate Teaching Experience</h2>
 
   <div class="degree-card">
     <div class="degree-header">
-      <h3>Graduate Teaching Assistant, BME 303: Introduction to Computing</h3>
+      <h3>BME 303: Introduction to Computing</h3>
     </div>
     <div class="edu-meta">
-      <span><i class="fas fa-building-columns"></i>Department of Biomedical Engineering , The University of Texas at Austin</span>
-      <span class="edu-date"><i class="fas fa-calendar"></i>Fall 2023 &amp; Fall 2025</span>
+      <span><i class="fas fa-building-columns"></i>Department of Biomedical Engineering, The University of Texas at Austin</span>
+      <span class="edu-date"><i class="fas fa-calendar"></i>Fall 2025</span>
+      <span class="edu-date"><i class="fas fa-user"></i>Instructor: Dr. Ernesto Lima</span>
     </div>
     <ul class="edu-bullets">
-      <li>Led three laboratory sections (~20 students each) for an 85-student undergraduate course on programming in C++ and Python.</li>
-      <li>Developed interactive and engaging lab material, including gamified review problems.</li>
+      <li>Developed teaching material and led five class sessions throughout the semester, including exam review sessions.</li>
+      <li>Led two laboratory sections (~15 students each) for a 55-student undergraduate course on programming in Python.</li>
+      <li>Refined prior teaching and laboratory materials based on feedback from 2023 student cohort.</li>
       <li>Supported course instruction and administrative tasks.</li>
+    </ul>
+
+    <figure class="teaching-photo">
+      <img src="images/bme303_fall2025.jpg" loading="lazy"
+           alt="Xiomara pointing at a projector screen during a BME 303 lecture, showing Python code and an animated heat map of drug diffusion in tissue.">
+      <figcaption>Leading a BME 303 class session in Fall 2025: walking students through a Python simulation of drug diffusion in tissue.</figcaption>
+    </figure>
+  </div>
+
+  <div class="degree-card">
+    <div class="degree-header">
+      <h3>BME 303: Introduction to Computing</h3>
+    </div>
+    <div class="edu-meta">
+      <span><i class="fas fa-building-columns"></i>Department of Biomedical Engineering, The University of Texas at Austin</span>
+      <span class="edu-date"><i class="fas fa-calendar"></i>Fall 2023</span>
+      <span class="edu-date"><i class="fas fa-user"></i>Instructor: Dr. Ernesto Lima</span>
+    </div>
+    <ul class="edu-bullets">
+      <li>Led three laboratory sections (~20 students each) for an 88-student undergraduate course on programming in C++ and Python.</li>
+      <li>Developed interactive and engaging lab material, including gamified review problems.</li>
+      <li>Supported course administrative tasks.</li>
     </ul>
   </div>
 
@@ -213,12 +250,17 @@
     <div class="edu-meta">
       <span><i class="fas fa-building-columns"></i>The University of Texas at Austin</span>
       <span class="edu-date"><i class="fas fa-calendar"></i>Anticipated 2027</span>
+      <span class="edu-date"><i class="fas fa-user"></i>Program Director: Dr. Maura Borrego</span>
+    </div>
+    <div>
+      <p>Graduate certificate program offered through the Cockrell School of Engineering for students interested in pursuing engineering faculty positions. It encompasses 16 course credit hours.</p>
     </div>
     <div class="skills-grid" style="margin-top:0;">
-      <span class="skill-tag">Curriculum Design &amp; Assessment in Engineering</span>
-      <span class="skill-tag">Interdisciplinary, Transdisciplinary &amp; Hybrid Learning</span>
-      <span class="skill-tag">Teaching Engineering</span>
-      <span class="skill-tag">Engineering Teaching Practicum</span>
+      <span class="skill-tag">Curriculum Design &amp; Assessment in Engineering (ME 398S)</span>
+      <span class="skill-tag">Interdisciplinary, Transdisciplinary &amp; Hybrid Learning (STM f390T)</span>
+      <span class="skill-tag">Teaching Engineering (ME 398T)</span>
+      <span class="skill-tag">Engineering Teaching Practicum (ME 698P)</span>
+      <span class="skill-tag">Teaching Portfolio (ME 198P)</span>
     </div>
   </div>
 
@@ -233,55 +275,7 @@
   </div>
 
   <!-- ===================== EDU RESEARCH ===================== -->
-  <h2><i class="fas fa-flask"></i>Engineering Education Research</h2>
-
-  <p>
-    My teaching is informed by my work in engineering education research. With the Center for Equity in
-    Engineering at UT Austin, I explored how open-source large language models can streamline qualitative
-    data analysis. A related preprint applies LLM-assisted sentiment analysis to students&rsquo; written
-    reflections:
-  </p>
-  <div class="degree-card c-pink">
-    <p class="citation">
-      Gonzalez XT, Flemming GC, Katz A, Denton M, Deters J. <em>LLM-assisted sentiment analysis for integrated
-      computational and qualitative mixed methods education research: A case study of students&rsquo; written
-      reflection assignments.</em> 2026.
-      <a href="https://arxiv.org/abs/2605.27403">arXiv:2605.27403</a>
-    </p>
-  </div>
-
-  <!-- ===================== MENTORING ===================== -->
-  <h2><i class="fas fa-hands-helping"></i>Mentoring &amp; Outreach</h2>
-
-  <div class="activity-grid">
-    <div class="activity-card">
-      <div class="activity-icon"><i class="fas fa-user-group"></i></div>
-      <h3>Graduate Student Mentor</h3>
-      <p>Society for Advancing Gender Equity in STEM (SAGES)<br>2023&ndash;2025</p>
-      <ul class="activity-list">
-        <li>Mentored across four cycles (Spring 2023&ndash;Fall 2024)</li>
-      </ul>
-    </div>
-    <div class="activity-card">
-      <div class="activity-icon"><i class="fas fa-laptop-code"></i></div>
-      <h3>Application Reviewer</h3>
-      <p>NCWIT Aspirations in Computing Awards<br>2016&ndash;present</p>
-      <ul class="activity-list">
-        <li>Review high school-level award applications as an alumna</li>
-      </ul>
-    </div>
-    <div class="activity-card">
-      <div class="activity-icon"><i class="fas fa-people-group"></i></div>
-      <h3>Vice President &amp; Webmaster</h3>
-      <p>Society of Hispanic Professional Engineers, UC Berkeley<br>2017&ndash;2019</p>
-      <ul class="activity-list">
-        <li>Advised on highly attended events, including a graduate school workshop series and K-12 outreach</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- ===================== EDU RESEARCH =====================
-  <h2><i class="fas fa-flask"></i>Engineering Education Research</h2>
+  <!-- <h2><i class="fas fa-flask"></i>Engineering Education Research</h2>
 
   <p>
     My teaching is informed by my work in engineering education research. With the Center for Equity in
@@ -298,6 +292,47 @@
     </p>
   </div> -->
 
+  <!-- ===================== MENTORING ===================== -->
+  <h2><i class="fas fa-hands-helping"></i>Mentoring &amp; Outreach</h2>
+
+  <div class="activity-grid">
+    <div class="activity-card">
+      <div class="activity-icon"><i class="fas fa-user-group"></i></div>
+      <h3>Graduate Student Mentor</h3>
+      <p>Society for Advancing Gender Equity in STEM (SAGES)<br>2023 &ndash; 2025</p>
+      <ul class="activity-list">
+        <li>Mentored graduate and undergraduate students across four program cycles</li>
+      </ul>
+    </div>
+    <div class="activity-card">
+      <div class="activity-icon"><i class="fas fa-user-group"></i></div>
+      <h3>Annual Retreat Committee &amp; Public Relatioins</h3>
+      <p>Graduates for Underrepresented Minorities (GUM)<br>2022&ndash;2024</p>
+      <ul class="activity-list">
+        <li>Coordinate and promote seminars and workshops for the professional development of GUM members</li>
+        <li>Contributions led to GUM being awarded the 2024 Best Social Organization Award from UT Austin's Dean of Students</li>
+      </ul>
+    </div>
+    <div class="activity-card">
+      <div class="activity-icon"><i class="fas fa-laptop-code"></i></div>
+      <h3>Application Reviewer</h3>
+      <p>NCWIT Aspirations in Computing Awards<br>2016&ndash;present</p>
+      <ul class="activity-list">
+        <li>Review high school-level award applications as an alumna</li>
+      </ul>
+    </div>
+    <div class="activity-card">
+      <div class="activity-icon"><i class="fas fa-people-group"></i></div>
+      <h3>Vice President &amp; Webmaster</h3>
+      <p>Society of Hispanic Professional Engineers, UC Berkeley<br>2017&ndash;2019</p>
+      <ul class="activity-list">
+        <li>Advised the administrative board on highly attended events (e.g., Graduate School Workshop Series, K-12 outreach events)</li>
+        <li>Helped secure corporate sponsorships up to $20,000/year to fund SHPE events (e.g., Winter Academic Training Camp)</li>
+        <li>Led department town halls and collaborated with the Associate Dean of Equity and Inclusion to revise policy mandating diversity training for faculty and student instructors</li>
+        <li>Contributions led to SHPE being awarded the 2019 Most Outstanding Student Organization Award from Berkeley's Dean of Student Affairs</li>
+      </ul>
+    </div>
+  </div>
 </section>
 </div>
 
@@ -309,6 +344,6 @@
     <p>&copy; <span id="current-year">2026</span> Xiomara Gonzalez</p>
 </div>
 </footer>
-
+<script src="dynamic.js"></script>
 </body>
 </html>
